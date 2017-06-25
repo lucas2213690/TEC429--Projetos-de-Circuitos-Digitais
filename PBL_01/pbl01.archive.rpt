@@ -1,0 +1,159 @@
+Archive Project report for pbl01
+Sat Apr 29 15:02:27 2017
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Sat Apr 29 15:02:27 2017 ;
+; Revision Name          ; pbl01                                 ;
+; Top-level Entity Name  ; generate_perror                       ;
+; Family                 ; ACEX1K                                ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Compilation Results' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+    Info: Report files
+    Info: Programming output files
+    Info: Compilation database files (only usable in Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition)
+    Info: Compilation database files
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'best.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'pbl01.archive.rpt'
+
+
++-----------------------------------------------------------------+
+; Files Archived                                                  ;
++-----------------------------------------------------------------+
+; File Name                                                       ;
++-----------------------------------------------------------------+
+; ../Users/Velder/Desktop/Hamming.bdf                             ;
+; c:/altera/90sp1/quartus/bin/assignment_defaults.qdf             ;
+; C:/quartus/pbl01.dpf                                            ;
+; C:/Users/Velder/Desktop/Hamming.bdf                             ;
+; check_c1.bdf                                                    ;
+; check_c2.bdf                                                    ;
+; check_c3.bdf                                                    ;
+; db/pbl01.(0).cnf.cdb                                            ;
+; db/pbl01.(0).cnf.hdb                                            ;
+; db/pbl01.(1).cnf.cdb                                            ;
+; db/pbl01.(1).cnf.hdb                                            ;
+; db/pbl01.(3).cnf.cdb                                            ;
+; db/pbl01.(3).cnf.hdb                                            ;
+; db/pbl01.(4).cnf.cdb                                            ;
+; db/pbl01.(4).cnf.hdb                                            ;
+; db/pbl01.(6).cnf.cdb                                            ;
+; db/pbl01.(6).cnf.hdb                                            ;
+; db/pbl01.(7).cnf.cdb                                            ;
+; db/pbl01.(7).cnf.hdb                                            ;
+; db/pbl01.(8).cnf.cdb                                            ;
+; db/pbl01.(8).cnf.hdb                                            ;
+; db/pbl01.archive.qmsg                                           ;
+; db/pbl01.asm.qmsg                                               ;
+; db/pbl01.cbx.xml                                                ;
+; db/pbl01.cmp.cdb                                                ;
+; db/pbl01.cmp.hdb                                                ;
+; db/pbl01.cmp.logdb                                              ;
+; db/pbl01.cmp.rdb                                                ;
+; db/pbl01.cmp.tdb                                                ;
+; db/pbl01.cmp0.ddb                                               ;
+; db/pbl01.db_info                                                ;
+; db/pbl01.eco.cdb                                                ;
+; db/pbl01.eds_overflow                                           ;
+; db/pbl01.fit.qmsg                                               ;
+; db/pbl01.fnsim.hdb                                              ;
+; db/pbl01.fnsim.qmsg                                             ;
+; db/pbl01.hier_info                                              ;
+; db/pbl01.hif                                                    ;
+; db/pbl01.lpc.html                                               ;
+; db/pbl01.lpc.rdb                                                ;
+; db/pbl01.lpc.txt                                                ;
+; db/pbl01.map.cdb                                                ;
+; db/pbl01.map.hdb                                                ;
+; db/pbl01.map.logdb                                              ;
+; db/pbl01.map.qmsg                                               ;
+; db/pbl01.pre_map.cdb                                            ;
+; db/pbl01.pre_map.hdb                                            ;
+; db/pbl01.rpp.qmsg                                               ;
+; db/pbl01.rtlv.hdb                                               ;
+; db/pbl01.rtlv_sg.cdb                                            ;
+; db/pbl01.rtlv_sg_swap.cdb                                       ;
+; db/pbl01.sgate.rvd                                              ;
+; db/pbl01.sgate_sm.rvd                                           ;
+; db/pbl01.sgdiff.cdb                                             ;
+; db/pbl01.sgdiff.hdb                                             ;
+; db/pbl01.sim.cvwf                                               ;
+; db/pbl01.sim.hdb                                                ;
+; db/pbl01.sim.qmsg                                               ;
+; db/pbl01.sim.qrpt                                               ;
+; db/pbl01.sim.rdb                                                ;
+; db/pbl01.simfam                                                 ;
+; db/pbl01.sld_design_entry.sci                                   ;
+; db/pbl01.sld_design_entry_dsc.sci                               ;
+; db/pbl01.syn_hier_info                                          ;
+; db/pbl01.tan.qmsg                                               ;
+; db/pbl01.tis_db_list.ddb                                        ;
+; generate_p1.bdf                                                 ;
+; generate_p2.bdf                                                 ;
+; generate_p3.bdf                                                 ;
+; generate_perror.bdf                                             ;
+; generate_perror.vwf                                             ;
+; incremental_db/compiled_partitions/pbl01.root_partition.map.kpt ;
+; pbl01.asm.rpt                                                   ;
+; pbl01.bdf                                                       ;
+; pbl01.dse.rpt                                                   ;
+; pbl01.fit.rpt                                                   ;
+; pbl01.fit.summary                                               ;
+; pbl01.flow.rpt                                                  ;
+; pbl01.map.rpt                                                   ;
+; pbl01.map.summary                                               ;
+; pbl01.pin                                                       ;
+; pbl01.pof                                                       ;
+; pbl01.qpf                                                       ;
+; pbl01.qsf                                                       ;
+; pbl01.sim.rpt                                                   ;
+; pbl01.sof                                                       ;
+; pbl01.tan.rpt                                                   ;
+; pbl01.tan.summary                                               ;
+; pbl01.vwf                                                       ;
++-----------------------------------------------------------------+
+
+

@@ -1,0 +1,351 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+2
+51
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+DivisorFrequencia32768hz
+# storage
+db|RD.(3).cnf
+db|RD.(3).cnf
+# case_insensitive
+# source_file
+DivisorFrequencia32768hz.bdf
+8f2d3d102160d4682a5a233c14be87de
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+DivisorFrequencia32768hz:inst3
+DivisorFrequencia32768hz:inst13
+DivisorFrequencia32768hz:inst16
+}
+# macro_sequence
+
+# end
+# entity
+ContadorModulo10
+# storage
+db|RD.(4).cnf
+db|RD.(4).cnf
+# case_insensitive
+# source_file
+ContadorModulo10.bdf
+2135c1d7e9e3382e6f3876f7319c793
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+ContadorModulo10:inst2
+ContadorModulo10:inst1
+ContadorModulo10:inst
+}
+# macro_sequence
+
+# end
+# entity
+CorretorOscilacaoBuzzer
+# storage
+db|RD.(6).cnf
+db|RD.(6).cnf
+# case_insensitive
+# source_file
+CorretorOscilacaoBuzzer.bdf
+f61dd181c1b7fe72ae5461b44a05b6c
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+CorretorOscilacaoBuzzer:inst11
+CorretorOscilacaoBuzzer:inst19
+CorretorOscilacaoBuzzer:inst20
+CorretorOscilacaoBuzzer:inst23
+}
+# macro_sequence
+
+# end
+# entity
+7408
+# storage
+db|RD.(7).cnf
+db|RD.(7).cnf
+# case_insensitive
+# source_file
+c:|altera|90sp2|quartus|libraries|others|maxplus2|7408.bdf
+895440148838e428c5ee97af95336e7e
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+CorretorOscilacaoBuzzer:inst11|7408:inst5
+CorretorOscilacaoBuzzer:inst19|7408:inst5
+CorretorOscilacaoBuzzer:inst20|7408:inst5
+CorretorOscilacaoBuzzer:inst23|7408:inst5
+}
+# macro_sequence
+
+# end
+# entity
+74294
+# storage
+db|RD.(8).cnf
+db|RD.(8).cnf
+# case_insensitive
+# source_file
+c:|altera|90sp2|quartus|libraries|others|maxplus2|74294.bdf
+ba5cce35ebdc2316868cd57017a75163
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+CorretorOscilacaoBuzzer:inst11|74294:inst4
+CorretorOscilacaoBuzzer:inst19|74294:inst4
+CorretorOscilacaoBuzzer:inst20|74294:inst4
+CorretorOscilacaoBuzzer:inst23|74294:inst4
+}
+# macro_sequence
+
+# end
+# entity
+decoderBCDAnodoComum
+# storage
+db|RD.(9).cnf
+db|RD.(9).cnf
+# case_insensitive
+# source_file
+decoderBCDAnodoComum.bdf
+8d9732afb7b860179cf55b71bad048f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+decoderBCDAnodoComum:inst18
+}
+# macro_sequence
+
+# end
+# entity
+multiplexador4x4
+# storage
+db|RD.(10).cnf
+db|RD.(10).cnf
+# case_insensitive
+# source_file
+multiplexador4x4.bdf
+eb1fc4fd75c611cb95a587463f4ea364
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+multiplexador4x4:inst14
+}
+# macro_sequence
+
+# end
+# entity
+DecoderSelecao7seg
+# storage
+db|RD.(13).cnf
+db|RD.(13).cnf
+# case_insensitive
+# source_file
+DecoderSelecao7seg.bdf
+15e195578b510378b745b37de45e0c7
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+DecoderSelecao7seg:inst17
+}
+# macro_sequence
+
+# end
+# entity
+RD_Oficial
+# storage
+db|RD.(5).cnf
+db|RD.(5).cnf
+# case_insensitive
+# source_file
+RD_Oficial.bdf
+e941abafc13488bb7df615b57bca66ed
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+contador0a9v1
+# storage
+db|RD.(2).cnf
+db|RD.(2).cnf
+# case_insensitive
+# source_file
+contador0a9v1.bdf
+05b2b1abdb65a685dda9f1519fb3c74
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+contador0a9v1:inst21
+contador0a9v1:inst9
+}
+# macro_sequence
+
+# end
+# entity
+Contador0a2
+# storage
+db|RD.(11).cnf
+db|RD.(11).cnf
+# case_insensitive
+# source_file
+Contador0a2.bdf
+e7f18effbdb7ac1e73e4e6b556e12d1
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Contador0a2:inst22
+}
+# macro_sequence
+
+# end
+# entity
+Contador0a9HorasTESTE
+# storage
+db|RD.(0).cnf
+db|RD.(0).cnf
+# case_insensitive
+# source_file
+Contador0a9HorasTESTE.bdf
+bb67a3aa78d2d71afa347ddb1f83df8c
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Contador0a9HorasTESTE:inst5
+}
+# macro_sequence
+
+# end
+# entity
+contador0a5
+# storage
+db|RD.(1).cnf
+db|RD.(1).cnf
+# case_insensitive
+# source_file
+contador0a5.bdf
+c2bd174b92ce409552e7a7b4209f4de
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+contador0a5:inst26
+contador0a5:inst27
+}
+# macro_sequence
+
+# end
+# entity
+Contador0a5Horas
+# storage
+db|RD.(12).cnf
+db|RD.(12).cnf
+# case_insensitive
+# source_file
+Contador0a5Horas.bdf
+fad4d96528a260fff284533dc1deb65b
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+Contador0a9Horas
+# storage
+db|RD.(14).cnf
+db|RD.(14).cnf
+# case_insensitive
+# source_file
+Contador0a9Horas.bdf
+f7ad7a99f36af25e432de9082dc28cc
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+contador0a3
+# storage
+db|RD.(15).cnf
+db|RD.(15).cnf
+# case_insensitive
+# source_file
+contador0a3.bdf
+f22905cabde8e53d0b2fa8d988ac448
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+contador0a3:inst15
+}
+# macro_sequence
+
+# end
+# complete
+

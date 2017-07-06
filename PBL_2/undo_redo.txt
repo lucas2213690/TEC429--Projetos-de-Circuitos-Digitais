@@ -1,0 +1,127 @@
+GED
+
+	Undo Commands
+	     1.	Delete
+
+
+GED
+
+	Undo Commands
+	     1.	Insert Node
+	     2.	Resize
+	     3.	Resize
+	     4.	Insert Node
+	     5.	Insert Node
+	     6.	Insert Node
+	     7.	Rotate 180
+	     8.	Rotate 90
+	     9.	Insert Symbol
+	    10.	Resize
+	    11.	Resize
+	    12.	Insert Node
+	    13.	Insert Node
+	    14.	Insert Node
+	    15.	Insert Node
+	    16.	Rotate 180
+	    17.	Rotate 90
+	    18.	Insert Symbol
+	    19.	Resize
+	    20.	Resize
+	    21.	Resize
+	    22.	Insert Node
+	    23.	Insert Node
+	    24.	Insert Node
+	    25.	Insert Node
+	    26.	Rotate 180
+	    27.	Rotate 90
+	    28.	Flip Horizontal
+	    29.	Rotate 180
+	    30.	Insert Symbol
+	    31.	Move
+	    32.	Move
+	    33.	Move
+	    34.	Rotate 180
+	    35.	Rotate 90
+	    36.	Insert Symbol
+	    37.	Delete
+	    38.	Delete
+	    39.	Delete
+	    40.	Insert Node
+	    41.	Move
+	    42.	Move
+	    43.	Rotate 180
+	    44.	Rotate 90
+	    45.	Insert Symbol
+	    46.	Resize
+	    47.	Insert Node
+	    48.	Insert Node
+	    49.	Insert Node
+	    50.	Insert Node
+	    51.	Move
+	    52.	Rotate 180
+	    53.	Rotate 90
+	    54.	Rotate 180
+	    55.	Rotate 180
+	    56.	Insert Symbol
+	    57.	Insert Node
+	    58.	Resize
+	    59.	Resize
+	    60.	Delete
+	    61.	Delete
+	    62.	Resize
+	    63.	Resize
+	    64.	Resize
+	    65.	Properties
+	    66.	Properties
+	    67.	Properties
+	    68.	Properties
+	    69.	Move
+	    70.	Paste
+	    71.	Resize
+	    72.	Resize
+	    73.	Move
+	    74.	Paste
+	    75.	Resize
+	    76.	Resize
+	    77.	Delete
+	    78.	Resize
+	    79.	Resize
+	    80.	Resize
+	    81.	Resize
+	    82.	Resize
+	    83.	Resize
+	    84.	Insert Node
+	    85.	Resize
+	    86.	Move
+	    87.	Paste
+	    88.	Resize
+	    89.	Move
+	    90.	Move
+	    91.	Rotate 180
+	    92.	Rotate 90
+	    93.	Rotate 180
+	    94.	Rotate 90
+	    95.	Rotate 90
+	    96.	Rotate 180
+	    97.	Rotate 90
+	    98.	Rotate 90
+	    99.	Move
+	   100.	Flip Vertical
+
+
+WED
+
+	Undo Commands
+	     1.	Count Value
+			 *** 
+	     2.	End Time
+	     3.	Count Value
+			 ***  *** 
+	     4.	Insert Node or Bus
+	     5.	Delete Node, Bus or Waveform Divider
+	     6.	Delete Node, Bus or Waveform Divider
+	     7.	Delete Node, Bus or Waveform Divider
+	     8.	Delete Node, Bus or Waveform Divider
+	     9.	Delete Node, Bus or Waveform Divider
+
+

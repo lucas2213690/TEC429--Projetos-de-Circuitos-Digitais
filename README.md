@@ -10,5 +10,7 @@
 
 ## Links úteis ##
 
-1.[Circuitos Integrados família 74 disponíveis no Quartus II 9.0](http://susta.cz/fel/74/index_eng.htm)
+1.[Manual Kit FPGA ACEX 1K](https://drive.google.com/open?id=0Bx1VVgelLTO_aHVJVFlheWpMVms)
+
+2.[Circuitos Integrados família 74 disponíveis no Quartus II 9.0](http://susta.cz/fel/74/index_eng.htm)
 

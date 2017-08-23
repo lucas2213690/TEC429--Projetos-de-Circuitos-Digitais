@@ -14,3 +14,7 @@
 
 2.[Circuitos Integrados família 74 disponíveis no Quartus II 9.0](http://susta.cz/fel/74/index_eng.htm)
 
+3.[Altera Megafunction Overview User Guide](https://www.altera.com.cn/zh_CN/pdfs/literature/ug/ug_megafunction_overview.pdf)
+
+4.[Tutorial para criar e simular circuitos digitais no Altera Quartus II](https://www2.pcs.usp.br/~labdig/material/GuiaResumido-Quartus_II_91_corrigida.pdf)
+

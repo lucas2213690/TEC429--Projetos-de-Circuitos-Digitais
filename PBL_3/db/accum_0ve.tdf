@@ -1,0 +1,51 @@
+--altaccumulate CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48 DEVICE_FAMILY="ACEX1K" LPM_REPRESENTATION="UNSIGNED" WIDTH_IN=4 WIDTH_OUT=5 aclr clken clock data result
+--VERSION_BEGIN 9.0 cbx_altaccumulate 2009:01:13:19:20:53:SJ cbx_cycloneii 2008:05:19:10:57:37:SJ cbx_lpm_add_sub 2008:12:09:22:11:50:SJ cbx_mgl 2009:01:29:16:12:07:SJ cbx_stratix 2008:09:18:16:08:35:SJ cbx_stratixii 2008:11:14:16:08:42:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2009 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION carry_sum (cin, sin)
+RETURNS ( cout, sout);
+
+--synthesis_resources = lut 10 
+SUBDESIGN accum_0ve
+( 
+	aclr	:	input;
+	clken	:	input;
+	clock	:	input;
+	data[3..0]	:	input;
+	result[4..0]	:	output;
+) 
+VARIABLE 
+	accum_cella[4..0] : carry_sum;
+	accum_regra[4..0] : dffe;
+	cin_wire	: WIRE;
+	data_wire[4..0]	: WIRE;
+	sload	: NODE;
+
+BEGIN 
+	accum_cella[].cin = ( (((accum_regra[4].q & accum_cella[3].cout) # (accum_regra[4].q & data_wire[4..4])) # (data_wire[4..4] & accum_cella[3].cout)), (((accum_regra[3].q & accum_cella[2].cout) # (accum_regra[3].q & data_wire[3..3])) # (data_wire[3..3] & accum_cella[2].cout)), (((accum_regra[2].q & accum_cella[1].cout) # (accum_regra[2].q & data_wire[2..2])) # (data_wire[2..2] & accum_cella[1].cout)), (((accum_regra[1].q & accum_cella[0].cout) # (accum_regra[1].q & data_wire[1..1])) # (data_wire[1..1] & accum_cella[0].cout)), (((accum_regra[0].q & cin_wire) # (accum_regra[0].q & data_wire[0..0])) # (data_wire[0..0] & cin_wire)));
+	accum_cella[].sin = ( ((accum_regra[4].q $ accum_cella[3].cout) $ data_wire[4..4]), ((accum_regra[3].q $ accum_cella[2].cout) $ data_wire[3..3]), ((accum_regra[2].q $ accum_cella[1].cout) $ data_wire[2..2]), ((accum_regra[1].q $ accum_cella[0].cout) $ data_wire[1..1]), ((accum_regra[0].q $ cin_wire) $ data_wire[0..0]));
+	accum_regra[].clk = clock;
+	accum_regra[].clrn = (! aclr);
+	accum_regra[].d = ( (accum_cella[4].sout & (! sload)), ((accum_cella[3].sout & (! sload)) # (sload & data[3..3])), ((accum_cella[2].sout & (! sload)) # (sload & data[2..2])), ((accum_cella[1].sout & (! sload)) # (sload & data[1..1])), ((accum_cella[0].sout & (! sload)) # (sload & data[0..0])));
+	accum_regra[].ena = clken;
+	cin_wire = B"0";
+	data_wire[] = ( B"0", data[]);
+	result[] = accum_regra[].q;
+	sload = GND;
+END;
+--VALID FILE

@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.400 ns
+From           : STAY
+To             : Debounce:inst28|inst
+From Clock     : --
+To Clock       : CLOCKCONT
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 43.300 ns
+From           : Acumulador:inst21|altaccumulate:altaccumulate_component|accum_0ve:accum_cell|accum_regra[2]
+To             : g
+From Clock     : CLOCKCONT
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.000 ns
+From           : RESET
+To             : Debounce:inst33|inst
+From Clock     : --
+To Clock       : CLOCKCONT
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLOCKCONT'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 43.86 MHz ( period = 22.800 ns )
+From           : Debounce:inst28|74294:inst4|56
+To             : Debounce:inst28|inst10
+From Clock     : CLOCKCONT
+To Clock       : CLOCKCONT
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CLOCKCONT'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : Debounce:inst33|inst10
+To             : MaquinaDeEstadoMoore:inst|Q0
+From Clock     : CLOCKCONT
+To Clock       : CLOCKCONT
+Failed Paths   : 35
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 35
+
+--------------------------------------------------------------------------------------
+

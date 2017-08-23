@@ -1,0 +1,7 @@
+set_global_assignment -name IP_TOOL_NAME "ALTACCUMULATE"
+set_global_assignment -name IP_TOOL_VERSION "9.0"
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "Acumulador.vhd"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "Acumulador.bsf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "Acumulador_inst.vhd"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "Acumulador.inc"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "Acumulador.cmp"]

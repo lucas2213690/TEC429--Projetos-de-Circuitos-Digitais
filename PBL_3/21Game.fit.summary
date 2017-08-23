@@ -1,0 +1,11 @@
+Fitter Status : Successful - Mon Aug 21 08:51:04 2017
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : 21Game
+Top-level Entity Name : 21Game
+Family : ACEX1K
+Device : EP1K100QC208-3
+Timing Models : Final
+Total logic elements : 271 / 4,992 ( 5 % )
+Total pins : 20 / 147 ( 14 % )
+Total memory bits : 256 / 49,152 ( < 1 % )
+Total PLLs : 0

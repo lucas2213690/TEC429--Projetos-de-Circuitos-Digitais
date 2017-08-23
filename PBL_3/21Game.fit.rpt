@@ -1,0 +1,932 @@
+Fitter report for 21Game
+Mon Aug 21 08:51:04 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Fitter Device Options
+  6. Input Pins
+  7. Output Pins
+  8. All Package Pins
+  9. Control Signals
+ 10. Global & Other Fast Signals
+ 11. Carry Chains
+ 12. Cascade Chains
+ 13. Embedded Cells
+ 14. Non-Global High Fan-Out Signals
+ 15. Peripheral Signals
+ 16. LAB
+ 17. Local Routing Interconnect
+ 18. LAB External Interconnect
+ 19. Row Interconnect
+ 20. LAB Column Interconnect
+ 21. LAB Column Interconnect
+ 22. Fitter Resource Usage Summary
+ 23. Fitter Resource Utilization by Entity
+ 24. Delay Chain Summary
+ 25. Fitter RAM Summary
+ 26. Pin-Out File
+ 27. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------+
+; Fitter Summary                                                   ;
++-----------------------+------------------------------------------+
+; Fitter Status         ; Successful - Mon Aug 21 08:51:04 2017    ;
+; Quartus II Version    ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name         ; 21Game                                   ;
+; Top-level Entity Name ; 21Game                                   ;
+; Family                ; ACEX1K                                   ;
+; Device                ; EP1K100QC208-3                           ;
+; Timing Models         ; Final                                    ;
+; Total logic elements  ; 271 / 4,992 ( 5 % )                      ;
+; Total pins            ; 20 / 147 ( 14 % )                        ;
+; Total memory bits     ; 256 / 49,152 ( < 1 % )                   ;
+; Total PLLs            ; 0                                        ;
++-----------------------+------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                      ;
++------------------------------------------------------------+--------------------+--------------------+
+; Option                                                     ; Setting            ; Default Value      ;
++------------------------------------------------------------+--------------------+--------------------+
+; Device                                                     ; EP1K100QC208-3     ;                    ;
+; Use smart compilation                                      ; Off                ; Off                ;
+; Use TimeQuest Timing Analyzer                              ; Off                ; Off                ;
+; Router Timing Optimization Level                           ; Normal             ; Normal             ;
+; Placement Effort Multiplier                                ; 1.0                ; 1.0                ;
+; Router Effort Multiplier                                   ; 1.0                ; 1.0                ;
+; Optimize Timing                                            ; Normal compilation ; Normal compilation ;
+; Optimize Timing for ECOs                                   ; Off                ; Off                ;
+; Regenerate full fit report during ECO compiles             ; Off                ; Off                ;
+; Optimize IOC Register Placement for Timing                 ; On                 ; On                 ;
+; Limit to One Fitting Attempt                               ; Off                ; Off                ;
+; Final Placement Optimizations                              ; Automatically      ; Automatically      ;
+; Fitter Aggressive Routability Optimizations                ; Automatically      ; Automatically      ;
+; Fitter Initial Placement Seed                              ; 1                  ; 1                  ;
+; Slow Slew Rate                                             ; Off                ; Off                ;
+; PCI I/O                                                    ; Off                ; Off                ;
+; Auto Global Memory Control Signals                         ; Off                ; Off                ;
+; Logic Cell Insertion - Individual Logic Cells              ; On                 ; On                 ;
+; Logic Cell Insertion - I/Os Fed By Carry or Cascade Chains ; On                 ; On                 ;
+; Fitter Effort                                              ; Auto Fit           ; Auto Fit           ;
+; Auto Global Clock                                          ; On                 ; On                 ;
+; Auto Global Output Enable                                  ; On                 ; On                 ;
+; Auto Global Register Control Signals                       ; On                 ; On                 ;
+; Force Fitter to Avoid Periphery Placement Warnings         ; Off                ; Off                ;
++------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------+
+; Fitter Device Options                                                   ;
++----------------------------------------------+--------------------------+
+; Option                                       ; Setting                  ;
++----------------------------------------------+--------------------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off                      ;
+; Enable device-wide reset (DEV_CLRn)          ; Off                      ;
+; Enable device-wide output enable (DEV_OE)    ; Off                      ;
+; Enable INIT_DONE output                      ; Off                      ;
+; Configuration scheme                         ; Passive Serial           ;
+; nWS, nRS, nCS, CS                            ; Unreserved               ;
+; RDYnBUSY                                     ; Unreserved               ;
+; Data[7..1]                                   ; Unreserved               ;
+; Reserve all unused pins                      ; As output driving ground ;
+; Base pin-out file on sameframe device        ; Off                      ;
++----------------------------------------------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                  ;
++-----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+--------------+
+; Name      ; Pin # ; Row ; Col. ; Fan-Out ; Global ; I/O Register ; Use Local Routing Input ; Power Up High ; PCI I/O Enabled ; Single-Pin CE ; I/O Standard ;
++-----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+--------------+
+; CLOCKCONT ; 79    ; --  ; --   ; 4       ; yes    ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; RESET     ; 92    ; --  ; 15   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; HIT       ; 89    ; --  ; 18   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; STAY      ; 87    ; --  ; 21   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
++-----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                 ;
++---------------+-------+-----+------+--------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+------------+---------------+--------------+
+; Name          ; Pin # ; Row ; Col. ; I/O Register ; Use Local Routing Output ; Power Up High ; Slow Slew Rate ; PCI I/O Enabled ; Single-Pin OE ; Single-Pin CE ; Open Drain ; TRI Primitive ; I/O Standard ;
++---------------+-------+-----+------+--------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+------------+---------------+--------------+
+; a             ; 68    ; --  ; 33   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; b             ; 39    ;  J  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; c             ; 56    ; --  ; 45   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; d             ; 61    ; --  ; 40   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; e             ; 63    ; --  ; 35   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; f             ; 65    ; --  ; 34   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; g             ; 54    ; --  ; 51   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; D1            ; 47    ;  L  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; D2            ; 41    ;  K  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; D3            ; 45    ;  L  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; D4            ; 70    ; --  ; 31   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; Empate        ; 143   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; DealerGanhou  ; 161   ; --  ; 12   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; JogadorGanhou ; 127   ;  F  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; T1            ; 131   ;  E  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; T2            ; 133   ;  D  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
++---------------+-------+-----+------+--------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+------------+---------------+--------------+
+
+
++--------------------------------------+
+; All Package Pins                     ;
++-------+---------------+--------------+
+; Pin # ; Usage         ; I/O Standard ;
++-------+---------------+--------------+
+; 1     ; #TCK          ;              ;
+; 2     ; ^CONF_DONE    ;              ;
+; 3     ; ^nCEO         ;              ;
+; 4     ; #TDO          ;              ;
+; 5     ; VCC_IO        ;              ;
+; 6     ; GND           ;              ;
+; 7     ; GND*          ;              ;
+; 8     ; GND*          ;              ;
+; 9     ; GND*          ;              ;
+; 10    ; GND*          ;              ;
+; 11    ; GND*          ;              ;
+; 12    ; GND*          ;              ;
+; 13    ; GND*          ;              ;
+; 14    ; GND*          ;              ;
+; 15    ; GND*          ;              ;
+; 16    ; GND*          ;              ;
+; 17    ; GND*          ;              ;
+; 18    ; GND*          ;              ;
+; 19    ; GND*          ;              ;
+; 20    ; GND           ;              ;
+; 21    ; VCC_INT       ;              ;
+; 22    ; VCC_IO        ;              ;
+; 23    ; GND           ;              ;
+; 24    ; GND*          ;              ;
+; 25    ; GND*          ;              ;
+; 26    ; GND*          ;              ;
+; 27    ; GND*          ;              ;
+; 28    ; GND*          ;              ;
+; 29    ; GND*          ;              ;
+; 30    ; GND*          ;              ;
+; 31    ; GND*          ;              ;
+; 32    ; GND           ;              ;
+; 33    ; VCC_INT       ;              ;
+; 34    ; VCC_IO        ;              ;
+; 35    ; GND           ;              ;
+; 36    ; GND*          ;              ;
+; 37    ; GND*          ;              ;
+; 38    ; GND*          ;              ;
+; 39    ; b             ; LVTTL/LVCMOS ;
+; 40    ; GND*          ;              ;
+; 41    ; D2            ; LVTTL/LVCMOS ;
+; 42    ; VCC_IO        ;              ;
+; 43    ; GND           ;              ;
+; 44    ; GND*          ;              ;
+; 45    ; D3            ; LVTTL/LVCMOS ;
+; 46    ; GND*          ;              ;
+; 47    ; D1            ; LVTTL/LVCMOS ;
+; 48    ; VCC_INT       ;              ;
+; 49    ; GND           ;              ;
+; 50    ; #TMS          ;              ;
+; 51    ; #TRST         ;              ;
+; 52    ; ^nSTATUS      ;              ;
+; 53    ; GND*          ;              ;
+; 54    ; g             ; LVTTL/LVCMOS ;
+; 55    ; GND*          ;              ;
+; 56    ; c             ; LVTTL/LVCMOS ;
+; 57    ; GND*          ;              ;
+; 58    ; GND*          ;              ;
+; 59    ; GND           ;              ;
+; 60    ; GND*          ;              ;
+; 61    ; d             ; LVTTL/LVCMOS ;
+; 62    ; GND*          ;              ;
+; 63    ; e             ; LVTTL/LVCMOS ;
+; 64    ; GND*          ;              ;
+; 65    ; f             ; LVTTL/LVCMOS ;
+; 66    ; VCC_IO        ;              ;
+; 67    ; GND*          ;              ;
+; 68    ; a             ; LVTTL/LVCMOS ;
+; 69    ; GND*          ;              ;
+; 70    ; D4            ; LVTTL/LVCMOS ;
+; 71    ; GND*          ;              ;
+; 72    ; VCC_INT       ;              ;
+; 73    ; GND*          ;              ;
+; 74    ; GND*          ;              ;
+; 75    ; GND*          ;              ;
+; 76    ; GND           ;              ;
+; 77    ; VCC_CKLK      ;              ;
+; 78    ; GND+          ;              ;
+; 79    ; CLOCKCONT     ; LVTTL/LVCMOS ;
+; 80    ; GND+          ;              ;
+; 81    ; GND_CKLK      ;              ;
+; 82    ; GND           ;              ;
+; 83    ; GND*          ;              ;
+; 84    ; VCC_IO        ;              ;
+; 85    ; GND*          ;              ;
+; 86    ; GND*          ;              ;
+; 87    ; STAY          ; LVTTL/LVCMOS ;
+; 88    ; GND*          ;              ;
+; 89    ; HIT           ; LVTTL/LVCMOS ;
+; 90    ; GND*          ;              ;
+; 91    ; VCC_INT       ;              ;
+; 92    ; RESET         ; LVTTL/LVCMOS ;
+; 93    ; GND*          ;              ;
+; 94    ; GND*          ;              ;
+; 95    ; GND*          ;              ;
+; 96    ; GND*          ;              ;
+; 97    ; GND*          ;              ;
+; 98    ; VCC_IO        ;              ;
+; 99    ; GND*          ;              ;
+; 100   ; GND*          ;              ;
+; 101   ; GND*          ;              ;
+; 102   ; GND*          ;              ;
+; 103   ; GND*          ;              ;
+; 104   ; GND*          ;              ;
+; 105   ; ^nCONFIG      ;              ;
+; 106   ; VCC_INT       ;              ;
+; 107   ; ^MSEL1        ;              ;
+; 108   ; ^MSEL0        ;              ;
+; 109   ; GND           ;              ;
+; 110   ; VCC_IO        ;              ;
+; 111   ; GND*          ;              ;
+; 112   ; GND*          ;              ;
+; 113   ; GND*          ;              ;
+; 114   ; GND*          ;              ;
+; 115   ; GND*          ;              ;
+; 116   ; GND*          ;              ;
+; 117   ; GND           ;              ;
+; 118   ; VCC_IO        ;              ;
+; 119   ; GND*          ;              ;
+; 120   ; GND*          ;              ;
+; 121   ; GND*          ;              ;
+; 122   ; GND*          ;              ;
+; 123   ; GND           ;              ;
+; 124   ; VCC_INT       ;              ;
+; 125   ; GND*          ;              ;
+; 126   ; GND*          ;              ;
+; 127   ; JogadorGanhou ; LVTTL/LVCMOS ;
+; 128   ; GND*          ;              ;
+; 129   ; GND           ;              ;
+; 130   ; VCC_INT       ;              ;
+; 131   ; T1            ; LVTTL/LVCMOS ;
+; 132   ; GND*          ;              ;
+; 133   ; T2            ; LVTTL/LVCMOS ;
+; 134   ; GND*          ;              ;
+; 135   ; GND*          ;              ;
+; 136   ; GND*          ;              ;
+; 137   ; GND           ;              ;
+; 138   ; VCC_IO        ;              ;
+; 139   ; GND*          ;              ;
+; 140   ; GND*          ;              ;
+; 141   ; GND*          ;              ;
+; 142   ; GND*          ;              ;
+; 143   ; Empate        ; LVTTL/LVCMOS ;
+; 144   ; GND*          ;              ;
+; 145   ; GND           ;              ;
+; 146   ; VCC_IO        ;              ;
+; 147   ; GND*          ;              ;
+; 148   ; GND*          ;              ;
+; 149   ; GND*          ;              ;
+; 150   ; GND*          ;              ;
+; 151   ; GND           ;              ;
+; 152   ; VCC_INT       ;              ;
+; 153   ; #TDI          ;              ;
+; 154   ; ^nCE          ;              ;
+; 155   ; ^DCLK         ;              ;
+; 156   ; ^DATA0        ;              ;
+; 157   ; GND*          ;              ;
+; 158   ; GND*          ;              ;
+; 159   ; GND*          ;              ;
+; 160   ; GND*          ;              ;
+; 161   ; DealerGanhou  ; LVTTL/LVCMOS ;
+; 162   ; GND*          ;              ;
+; 163   ; GND*          ;              ;
+; 164   ; GND*          ;              ;
+; 165   ; VCC_IO        ;              ;
+; 166   ; GND*          ;              ;
+; 167   ; GND*          ;              ;
+; 168   ; GND*          ;              ;
+; 169   ; GND*          ;              ;
+; 170   ; GND*          ;              ;
+; 171   ; GND           ;              ;
+; 172   ; GND*          ;              ;
+; 173   ; GND*          ;              ;
+; 174   ; GND*          ;              ;
+; 175   ; GND*          ;              ;
+; 176   ; GND*          ;              ;
+; 177   ; GND*          ;              ;
+; 178   ; VCC_IO        ;              ;
+; 179   ; GND*          ;              ;
+; 180   ; GND*          ;              ;
+; 181   ; GND           ;              ;
+; 182   ; GND+          ;              ;
+; 183   ; GND+          ;              ;
+; 184   ; GND+          ;              ;
+; 185   ; VCC_INT       ;              ;
+; 186   ; GND*          ;              ;
+; 187   ; GND*          ;              ;
+; 188   ; GND           ;              ;
+; 189   ; GND*          ;              ;
+; 190   ; GND*          ;              ;
+; 191   ; GND*          ;              ;
+; 192   ; GND*          ;              ;
+; 193   ; GND*          ;              ;
+; 194   ; VCC_IO        ;              ;
+; 195   ; GND*          ;              ;
+; 196   ; GND*          ;              ;
+; 197   ; GND*          ;              ;
+; 198   ; GND*          ;              ;
+; 199   ; GND*          ;              ;
+; 200   ; GND*          ;              ;
+; 201   ; VCC_INT       ;              ;
+; 202   ; GND*          ;              ;
+; 203   ; GND*          ;              ;
+; 204   ; GND*          ;              ;
+; 205   ; GND*          ;              ;
+; 206   ; GND*          ;              ;
+; 207   ; GND*          ;              ;
+; 208   ; GND*          ;              ;
++-------+---------------+--------------+
+
+
++-------------------------------------------------------------------------------------+
+; Control Signals                                                                     ;
++-----------------------------------+---------+---------+--------------+--------------+
+; Name                              ; Pin #   ; Fan-Out ; Usage        ; Global Usage ;
++-----------------------------------+---------+---------+--------------+--------------+
+; decoderAcumulador:inst44|inst~1   ; LC7_L9  ; 5       ; Clock enable ; Non-global   ;
+; decoderAcumulador:inst44|inst~0   ; LC8_L10 ; 5       ; Clock enable ; Non-global   ;
+; inst8~3                           ; LC2_L12 ; 15      ; Clock enable ; Non-global   ;
+; CLOCKCONT                         ; 79      ; 4       ; Clock        ; Pin          ;
+; ContadorModulo10:inst14|inst3     ; LC4_H45 ; 15      ; Clock        ; Non-global   ;
+; Debounce:inst33|inst10            ; LC1_G2  ; 23      ; Async. clear ; Non-global   ;
+; 74294:inst25|104                  ; LC2_I7  ; 25      ; Clock        ; Non-global   ;
+; Debounce:inst31|inst10            ; LC1_K46 ; 33      ; Clock        ; Internal     ;
+; contador0a3:inst16|inst1          ; LC1_L50 ; 19      ; Clock enable ; Non-global   ;
+; ContadorModulo10:inst26|inst3     ; LC1_H30 ; 19      ; Clock        ; Non-global   ;
+; 74294:inst25|8                    ; LC4_I10 ; 5       ; Clock enable ; Non-global   ;
+; Debounce:inst33|74294:inst4|154~0 ; LC3_G2  ; 15      ; Clock        ; Non-global   ;
+; Debounce:inst33|74294:inst4|8     ; LC4_G12 ; 5       ; Clock enable ; Non-global   ;
+; Debounce:inst33|inst7             ; LC2_G2  ; 15      ; Async. clear ; Non-global   ;
+; ContadorModulo10:inst24|inst3     ; LC2_H31 ; 6       ; Clock        ; Non-global   ;
+; Debounce:inst33|74294:inst4|153   ; LC1_G1  ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst33|7408:inst5|4      ; LC6_G2  ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst31|74294:inst4|154~0 ; LC3_K46 ; 15      ; Clock        ; Non-global   ;
+; Debounce:inst28|74294:inst4|154~0 ; LC3_F40 ; 15      ; Clock        ; Non-global   ;
+; Debounce:inst31|74294:inst4|146   ; LC1_K45 ; 4       ; Clock enable ; Non-global   ;
+; Debounce:inst31|74294:inst4|144   ; LC5_K45 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst31|74294:inst4|8     ; LC4_K48 ; 5       ; Clock enable ; Non-global   ;
+; Debounce:inst31|inst7             ; LC2_K46 ; 15      ; Async. clear ; Non-global   ;
+; Debounce:inst31|74294:inst4|142   ; LC2_K45 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst31|74294:inst4|153   ; LC1_K43 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst28|74294:inst4|8     ; LC4_F35 ; 5       ; Clock enable ; Non-global   ;
+; Debounce:inst28|inst7             ; LC2_F40 ; 15      ; Async. clear ; Non-global   ;
+; Debounce:inst28|74294:inst4|153   ; LC1_F41 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst28|7408:inst5|4      ; LC6_F40 ; 1       ; Clock enable ; Non-global   ;
+; 74294:inst25|96                   ; LC5_I7  ; 2       ; Clock enable ; Non-global   ;
+; 74294:inst25|150                  ; LC7_I7  ; 1       ; Clock enable ; Non-global   ;
+; 74294:inst25|148                  ; LC8_I7  ; 1       ; Clock enable ; Non-global   ;
+; 74294:inst25|146                  ; LC1_I8  ; 4       ; Clock enable ; Non-global   ;
+; Debounce:inst33|74294:inst4|146   ; LC2_G3  ; 4       ; Clock enable ; Non-global   ;
+; Debounce:inst33|74294:inst4|96    ; LC6_G1  ; 2       ; Clock enable ; Non-global   ;
+; Debounce:inst33|74294:inst4|150   ; LC7_G1  ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst33|74294:inst4|148   ; LC8_G1  ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst33|74294:inst4|140   ; LC1_G10 ; 4       ; Clock enable ; Non-global   ;
+; Debounce:inst33|74294:inst4|142   ; LC4_G3  ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst33|74294:inst4|144   ; LC6_G3  ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst28|74294:inst4|146   ; LC2_F39 ; 4       ; Clock enable ; Non-global   ;
+; Debounce:inst28|74294:inst4|96    ; LC6_F41 ; 2       ; Clock enable ; Non-global   ;
+; Debounce:inst28|74294:inst4|150   ; LC7_F41 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst28|74294:inst4|148   ; LC8_F41 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst28|74294:inst4|140   ; LC1_F38 ; 4       ; Clock enable ; Non-global   ;
+; Debounce:inst28|74294:inst4|142   ; LC4_F39 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst28|74294:inst4|144   ; LC6_F39 ; 1       ; Clock enable ; Non-global   ;
+; 74294:inst25|140                  ; LC1_I9  ; 4       ; Clock enable ; Non-global   ;
+; 74294:inst25|144                  ; LC6_I8  ; 1       ; Clock enable ; Non-global   ;
+; 74294:inst25|142                  ; LC7_I8  ; 1       ; Clock enable ; Non-global   ;
+; 74294:inst25|134                  ; LC1_I10 ; 4       ; Clock enable ; Non-global   ;
+; 74294:inst25|138                  ; LC5_I9  ; 1       ; Clock enable ; Non-global   ;
+; 74294:inst25|136                  ; LC6_I9  ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst33|74294:inst4|134   ; LC1_G12 ; 4       ; Clock enable ; Non-global   ;
+; Debounce:inst33|74294:inst4|138   ; LC5_G10 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst33|74294:inst4|136   ; LC6_G10 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst31|74294:inst4|96    ; LC6_K43 ; 2       ; Clock enable ; Non-global   ;
+; Debounce:inst31|74294:inst4|150   ; LC7_K43 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst31|74294:inst4|148   ; LC8_K43 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst31|74294:inst4|140   ; LC1_K47 ; 4       ; Clock enable ; Non-global   ;
+; Debounce:inst31|74294:inst4|134   ; LC1_K48 ; 4       ; Clock enable ; Non-global   ;
+; Debounce:inst31|74294:inst4|138   ; LC5_K47 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst31|74294:inst4|136   ; LC6_K47 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst28|74294:inst4|134   ; LC1_F35 ; 4       ; Clock enable ; Non-global   ;
+; Debounce:inst28|74294:inst4|138   ; LC5_F38 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst28|74294:inst4|136   ; LC6_F38 ; 1       ; Clock enable ; Non-global   ;
+; ContadorModulo10:inst26|inst5     ; LC6_H30 ; 1       ; Clock enable ; Non-global   ;
+; ContadorModulo10:inst14|inst5     ; LC6_H45 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst31|7408:inst5|4      ; LC7_K46 ; 1       ; Clock enable ; Non-global   ;
+; 74294:inst25|153                  ; LC6_I7  ; 1       ; Clock enable ; Non-global   ;
+; ContadorModulo10:inst26|inst8     ; LC5_H30 ; 1       ; Clock enable ; Non-global   ;
+; ContadorModulo10:inst24|inst5     ; LC6_H31 ; 1       ; Clock enable ; Non-global   ;
+; ContadorModulo10:inst14|inst8     ; LC5_H45 ; 1       ; Clock enable ; Non-global   ;
+; 74294:inst25|133                  ; LC6_I10 ; 1       ; Clock enable ; Non-global   ;
+; 74294:inst25|13                   ; LC7_I10 ; 1       ; Clock enable ; Non-global   ;
+; ContadorModulo10:inst24|inst8     ; LC5_H31 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst33|74294:inst4|133   ; LC6_G12 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst33|74294:inst4|13    ; LC7_G12 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst31|74294:inst4|133   ; LC6_K48 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst31|74294:inst4|13    ; LC7_K48 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst28|74294:inst4|133   ; LC6_F35 ; 1       ; Clock enable ; Non-global   ;
+; Debounce:inst28|74294:inst4|13    ; LC7_F35 ; 1       ; Clock enable ; Non-global   ;
++-----------------------------------+---------+---------+--------------+--------------+
+
+
++-----------------------------------------------------+
+; Global & Other Fast Signals                         ;
++------------------------+---------+---------+--------+
+; Name                   ; Pin #   ; Fan-Out ; Global ;
++------------------------+---------+---------+--------+
+; CLOCKCONT              ; 79      ; 4       ; yes    ;
+; Debounce:inst31|inst10 ; LC1_K46 ; 33      ; yes    ;
++------------------------+---------+---------+--------+
+
+
++---------------------------------------------+
+; Carry Chains                                ;
++--------------------+------------------------+
+; Carry Chain Length ; Number of Carry Chains ;
++--------------------+------------------------+
+; 0                  ; 0                      ;
+; 1                  ; 0                      ;
+; 2                  ; 0                      ;
+; 3                  ; 0                      ;
+; 4                  ; 0                      ;
+; 5                  ; 2                      ;
+; 6                  ; 1                      ;
++--------------------+------------------------+
+
+
++----------------+
+; Cascade Chains ;
++--------+-------+
+; Length ; Count ;
++--------+-------+
+; 2      ; 4     ;
++--------+-------+
+
+
++------------------------------------------------------------------------------+
+; Embedded Cells                                                               ;
++--------+------------------------------------------------------+------+-------+
+; Cell # ; Name                                                 ; Mode ; Turbo ;
++--------+------------------------------------------------------+------+-------+
+; EC1_L  ; ROM:inst4|lpm_rom:lpm_rom_component|altrom:srom|q[1] ; RAM  ; Off   ;
+; EC10_L ; ROM:inst4|lpm_rom:lpm_rom_component|altrom:srom|q[2] ; RAM  ; Off   ;
+; EC2_L  ; ROM:inst4|lpm_rom:lpm_rom_component|altrom:srom|q[3] ; RAM  ; Off   ;
+; EC9_L  ; ROM:inst4|lpm_rom:lpm_rom_component|altrom:srom|q[0] ; RAM  ; Off   ;
++--------+------------------------------------------------------+------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                                                 ;
++-----------------------------------------------------------------------------------------------------------------------+---------+
+; Name                                                                                                                  ; Fan-Out ;
++-----------------------------------------------------------------------------------------------------------------------+---------+
+; 74294:inst25|104~1                                                                                                    ; 25      ;
+; Debounce:inst33|inst10~2                                                                                              ; 23      ;
+; contador0a3:inst16|inst1~4                                                                                            ; 19      ;
+; ContadorModulo10:inst26|inst3~2                                                                                       ; 19      ;
+; Debounce:inst28|inst7~0                                                                                               ; 15      ;
+; Debounce:inst31|inst7~0                                                                                               ; 15      ;
+; inst8~6                                                                                                               ; 15      ;
+; Debounce:inst31|74294:inst4|154~1                                                                                     ; 15      ;
+; Debounce:inst28|74294:inst4|154~1                                                                                     ; 15      ;
+; ContadorModulo10:inst14|inst3~2                                                                                       ; 15      ;
+; Debounce:inst33|inst7~0                                                                                               ; 15      ;
+; Debounce:inst33|74294:inst4|154~1                                                                                     ; 15      ;
+; contador0a3:inst16|inst~4                                                                                             ; 13      ;
+; Acumulador:inst21|altaccumulate:altaccumulate_component|accum_0ve:accum_cell|accum_regra[2]~12                        ; 11      ;
+; Acumulador:inst21|altaccumulate:altaccumulate_component|accum_0ve:accum_cell|accum_regra[3]~14                        ; 11      ;
+; Acumulador:inst19|altaccumulate:altaccumulate_component|accum_0ve:accum_cell|accum_regra[2]~13                        ; 10      ;
+; Acumulador:inst19|altaccumulate:altaccumulate_component|accum_0ve:accum_cell|accum_regra[3]~14                        ; 10      ;
+; MaquinaDeEstadoMoore:inst|Q1~0                                                                                        ; 10      ;
+; Acumulador:inst19|altaccumulate:altaccumulate_component|accum_0ve:accum_cell|accum_regra[4]~12                        ; 9       ;
+; Acumulador:inst21|altaccumulate:altaccumulate_component|accum_0ve:accum_cell|accum_regra[4]~13                        ; 9       ;
+; Acumulador:inst21|altaccumulate:altaccumulate_component|accum_0ve:accum_cell|accum_regra[1]~11                        ; 9       ;
+; Acumulador:inst19|altaccumulate:altaccumulate_component|accum_0ve:accum_cell|accum_regra[1]~15                        ; 8       ;
+; muxBCD:inst18|lpm_mux1:inst|lpm_mux:lpm_mux_component|muxlut:$00009|result_node~11                                    ; 7       ;
+; MaquinaDeEstadoMoore:inst|Q0~0                                                                                        ; 7       ;
+; ContadorModulo10:inst24|inst~2                                                                                        ; 7       ;
+; muxBCD:inst18|lpm_mux1:inst|lpm_mux:lpm_mux_component|muxlut:$00013|result_node~7                                     ; 7       ;
+; muxBCD:inst18|lpm_mux1:inst|lpm_mux:lpm_mux_component|muxlut:$00011|result_node~14                                    ; 7       ;
+; cont52:inst23|lpm_counter1:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[4]~COUT ; 6       ;
+; cont52:inst23|lpm_counter1:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[3]~COUT ; 6       ;
+; cont52:inst23|lpm_counter1:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[2]~COUT ; 6       ;
+; cont52:inst23|lpm_counter1:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]~COUT ; 6       ;
+; cont52:inst23|lpm_counter1:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]~COUT ; 6       ;
+; ContadorModulo10:inst24|inst3~2                                                                                       ; 6       ;
+; muxBCD:inst18|lpm_mux1:inst|lpm_mux:lpm_mux_component|muxlut:$00015|result_node~12                                    ; 6       ;
+; cont52:inst23|inst9~2                                                                                                 ; 6       ;
+; 74294:inst25|8~1                                                                                                      ; 5       ;
+; Debounce:inst28|74294:inst4|56~1                                                                                      ; 5       ;
+; Debounce:inst28|74294:inst4|8~1                                                                                       ; 5       ;
+; Acumulador:inst21|altaccumulate:altaccumulate_component|accum_0ve:accum_cell|accum_regra[0]~15                        ; 5       ;
+; Debounce:inst31|74294:inst4|8~1                                                                                       ; 5       ;
+; cont52:inst23|lpm_counter1:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[5]~5               ; 5       ;
+; Debounce:inst31|74294:inst4|56~1                                                                                      ; 5       ;
+; decoderAcumulador:inst44|inst~2                                                                                       ; 5       ;
+; Debounce:inst33|74294:inst4|56~1                                                                                      ; 5       ;
+; Debounce:inst33|74294:inst4|8~1                                                                                       ; 5       ;
+; decoderAcumulador:inst44|inst~3                                                                                       ; 5       ;
+; 74294:inst25|9~1                                                                                                      ; 4       ;
+; Debounce:inst31|74294:inst4|140~0                                                                                     ; 4       ;
+; Debounce:inst28|74294:inst4|134~0                                                                                     ; 4       ;
+; Debounce:inst31|74294:inst4|134~0                                                                                     ; 4       ;
++-----------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Peripheral Signals                                                                                ;
++------------------------+---------+-------+-----------------+---------------------------+----------+
+; Peripheral Signal      ; Source  ; Usage ; Dedicated Clock ; Peripheral Control Signal ; Polarity ;
++------------------------+---------+-------+-----------------+---------------------------+----------+
+; Debounce:inst31|inst10 ; LC1_K46 ; Clock ; no              ; yes                       ; -ve      ;
++------------------------+---------+-------+-----------------+---------------------------+----------+
+
+
++-------------------------------------------+
+; LAB                                       ;
++--------------------------+----------------+
+; Number of Logic Elements ; Number of LABs ;
++--------------------------+----------------+
+; 0                        ; 577            ;
+; 1                        ; 8              ;
+; 2                        ; 1              ;
+; 3                        ; 1              ;
+; 4                        ; 1              ;
+; 5                        ; 2              ;
+; 6                        ; 9              ;
+; 7                        ; 10             ;
+; 8                        ; 15             ;
++--------------------------+----------------+
+
+
++----------------------------------------------+
+; Local Routing Interconnect                   ;
++-----------------------------+----------------+
+; Local Routing Interconnects ; Number of LABs ;
++-----------------------------+----------------+
+; 0                           ; 589            ;
+; 1                           ; 0              ;
+; 2                           ; 3              ;
+; 3                           ; 3              ;
+; 4                           ; 2              ;
+; 5                           ; 7              ;
+; 6                           ; 12             ;
+; 7                           ; 5              ;
+; 8                           ; 3              ;
++-----------------------------+----------------+
+
+
++---------------------------------------------+
+; LAB External Interconnect                   ;
++----------------------------+----------------+
+; LAB External Interconnects ; Number of LABs ;
++----------------------------+----------------+
+; 0                          ; 579            ;
+; 1                          ; 3              ;
+; 2                          ; 5              ;
+; 3                          ; 14             ;
+; 4                          ; 7              ;
+; 5                          ; 3              ;
+; 6                          ; 3              ;
+; 7                          ; 2              ;
+; 8                          ; 4              ;
+; 9                          ; 3              ;
+; 10                         ; 1              ;
++----------------------------+----------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Row Interconnect                                                                        ;
++-------+--------------------+-----------------------------+------------------------------+
+; Row   ; Interconnect Used  ; Left Half Interconnect Used ; Right Half Interconnect Used ;
++-------+--------------------+-----------------------------+------------------------------+
+;  A    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  B    ;  0 / 208 ( 0 % )   ;  1 / 104 ( < 1 % )          ;  0 / 104 ( 0 % )             ;
+;  C    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  D    ;  1 / 208 ( < 1 % ) ;  1 / 104 ( < 1 % )          ;  0 / 104 ( 0 % )             ;
+;  E    ;  0 / 208 ( 0 % )   ;  1 / 104 ( < 1 % )          ;  0 / 104 ( 0 % )             ;
+;  F    ;  6 / 208 ( 3 % )   ;  1 / 104 ( < 1 % )          ;  4 / 104 ( 4 % )             ;
+;  G    ;  7 / 208 ( 3 % )   ;  3 / 104 ( 3 % )            ;  0 / 104 ( 0 % )             ;
+;  H    ;  1 / 208 ( < 1 % ) ;  0 / 104 ( 0 % )            ;  1 / 104 ( < 1 % )           ;
+;  I    ;  5 / 208 ( 2 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  J    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  5 / 104 ( 5 % )             ;
+;  K    ;  7 / 208 ( 3 % )   ;  0 / 104 ( 0 % )            ;  5 / 104 ( 5 % )             ;
+;  L    ;  49 / 208 ( 24 % ) ;  10 / 104 ( 10 % )          ;  9 / 104 ( 9 % )             ;
+; Total ;  76 / 2496 ( 3 % ) ;  17 / 1248 ( 1 % )          ;  24 / 1248 ( 2 % )           ;
++-------+--------------------+-----------------------------+------------------------------+
+
+
++----------------------------+
+; LAB Column Interconnect    ;
++-------+--------------------+
+; Col.  ; Interconnect Used  ;
++-------+--------------------+
+; 1     ;  0 / 24 ( 0 % )    ;
+; 2     ;  1 / 24 ( 4 % )    ;
+; 3     ;  0 / 24 ( 0 % )    ;
+; 4     ;  0 / 24 ( 0 % )    ;
+; 5     ;  0 / 24 ( 0 % )    ;
+; 6     ;  0 / 24 ( 0 % )    ;
+; 7     ;  1 / 24 ( 4 % )    ;
+; 8     ;  0 / 24 ( 0 % )    ;
+; 9     ;  0 / 24 ( 0 % )    ;
+; 10    ;  0 / 24 ( 0 % )    ;
+; 11    ;  2 / 24 ( 8 % )    ;
+; 12    ;  3 / 24 ( 13 % )   ;
+; 13    ;  0 / 24 ( 0 % )    ;
+; 14    ;  0 / 24 ( 0 % )    ;
+; 15    ;  1 / 24 ( 4 % )    ;
+; 16    ;  0 / 24 ( 0 % )    ;
+; 17    ;  0 / 24 ( 0 % )    ;
+; 18    ;  1 / 24 ( 4 % )    ;
+; 19    ;  0 / 24 ( 0 % )    ;
+; 20    ;  0 / 24 ( 0 % )    ;
+; 21    ;  1 / 24 ( 4 % )    ;
+; 22    ;  0 / 24 ( 0 % )    ;
+; 23    ;  0 / 24 ( 0 % )    ;
+; 24    ;  0 / 24 ( 0 % )    ;
+; 25    ;  0 / 24 ( 0 % )    ;
+; 26    ;  0 / 24 ( 0 % )    ;
+; 27    ;  0 / 24 ( 0 % )    ;
+; 28    ;  0 / 24 ( 0 % )    ;
+; 29    ;  0 / 24 ( 0 % )    ;
+; 30    ;  1 / 24 ( 4 % )    ;
+; 31    ;  2 / 24 ( 8 % )    ;
+; 32    ;  1 / 24 ( 4 % )    ;
+; 33    ;  1 / 24 ( 4 % )    ;
+; 34    ;  1 / 24 ( 4 % )    ;
+; 35    ;  1 / 24 ( 4 % )    ;
+; 36    ;  0 / 24 ( 0 % )    ;
+; 37    ;  0 / 24 ( 0 % )    ;
+; 38    ;  0 / 24 ( 0 % )    ;
+; 39    ;  1 / 24 ( 4 % )    ;
+; 40    ;  2 / 24 ( 8 % )    ;
+; 41    ;  1 / 24 ( 4 % )    ;
+; 42    ;  0 / 24 ( 0 % )    ;
+; 43    ;  1 / 24 ( 4 % )    ;
+; 44    ;  0 / 24 ( 0 % )    ;
+; 45    ;  2 / 24 ( 8 % )    ;
+; 46    ;  1 / 24 ( 4 % )    ;
+; 47    ;  0 / 24 ( 0 % )    ;
+; 48    ;  0 / 24 ( 0 % )    ;
+; 49    ;  0 / 24 ( 0 % )    ;
+; 50    ;  1 / 24 ( 4 % )    ;
+; 51    ;  1 / 24 ( 4 % )    ;
+; 52    ;  0 / 24 ( 0 % )    ;
+; Total ;  27 / 1248 ( 2 % ) ;
++-------+--------------------+
+
+
++---------------------------+
+; LAB Column Interconnect   ;
++-------+-------------------+
+; Col.  ; Interconnect Used ;
++-------+-------------------+
+; 1     ;  0 / 48 ( 0 % )   ;
+; Total ;  0 / 48 ( 0 % )   ;
++-------+-------------------+
+
+
++------------------------------------------------------------+
+; Fitter Resource Usage Summary                              ;
++-----------------------------------+------------------------+
+; Resource                          ; Usage                  ;
++-----------------------------------+------------------------+
+; Total logic elements              ; 271 / 4,992 ( 5 % )    ;
+; Registers                         ; 133 / 4,992 ( 3 % )    ;
+; Logic elements in carry chains    ; 16                     ;
+; User inserted logic elements      ; 0                      ;
+; I/O pins                          ; 20 / 147 ( 14 % )      ;
+;     -- Clock pins                 ; 1                      ;
+;     -- Dedicated input pins       ; 0 / 4 ( 0 % )          ;
+; Global signals                    ; 2                      ;
+; EABs                              ; 1 / 12 ( 8 % )         ;
+; Total memory bits                 ; 256 / 49,152 ( < 1 % ) ;
+; Total RAM block bits              ; 4,096 / 49,152 ( 8 % ) ;
+; Maximum fan-out node              ; Debounce:inst31|inst10 ;
+; Maximum fan-out                   ; 37                     ;
+; Highest non-global fan-out signal ; 74294:inst25|104       ;
+; Highest non-global fan-out        ; 25                     ;
+; Total fan-out                     ; 924                    ;
+; Average fan-out                   ; 3.13                   ;
++-----------------------------------+------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                      ;
++-----------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                    ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                                  ; Library Name ;
++-----------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |21Game                                       ; 271 (4)     ; 133          ; 256         ; 20   ; 138 (4)      ; 37 (0)            ; 96 (0)           ; 16 (0)          ; 0 (0)      ; |21Game                                                                                                                                              ; work         ;
+;    |74185:inst11|                             ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|74185:inst11                                                                                                                                 ; work         ;
+;    |74247:inst6|                              ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|74247:inst6                                                                                                                                  ; work         ;
+;    |74273:inst35|                             ; 5 (5)       ; 5            ; 0           ; 0    ; 0 (0)        ; 5 (5)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|74273:inst35                                                                                                                                 ; work         ;
+;    |74273:inst37|                             ; 5 (5)       ; 5            ; 0           ; 0    ; 0 (0)        ; 5 (5)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|74273:inst37                                                                                                                                 ; work         ;
+;    |74294:inst25|                             ; 28 (28)     ; 15           ; 0           ; 0    ; 13 (13)      ; 0 (0)             ; 15 (15)          ; 0 (0)           ; 0 (0)      ; |21Game|74294:inst25                                                                                                                                 ; work         ;
+;    |Acumulador:inst19|                        ; 10 (0)      ; 5            ; 0           ; 0    ; 5 (0)        ; 5 (0)             ; 0 (0)            ; 5 (0)           ; 0 (0)      ; |21Game|Acumulador:inst19                                                                                                                            ; work         ;
+;       |altaccumulate:altaccumulate_component| ; 10 (0)      ; 5            ; 0           ; 0    ; 5 (0)        ; 5 (0)             ; 0 (0)            ; 5 (0)           ; 0 (0)      ; |21Game|Acumulador:inst19|altaccumulate:altaccumulate_component                                                                                      ; work         ;
+;          |accum_0ve:accum_cell|               ; 10 (10)     ; 5            ; 0           ; 0    ; 5 (5)        ; 5 (5)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |21Game|Acumulador:inst19|altaccumulate:altaccumulate_component|accum_0ve:accum_cell                                                                 ; work         ;
+;    |Acumulador:inst21|                        ; 10 (0)      ; 5            ; 0           ; 0    ; 5 (0)        ; 5 (0)             ; 0 (0)            ; 5 (0)           ; 0 (0)      ; |21Game|Acumulador:inst21                                                                                                                            ; work         ;
+;       |altaccumulate:altaccumulate_component| ; 10 (0)      ; 5            ; 0           ; 0    ; 5 (0)        ; 5 (0)             ; 0 (0)            ; 5 (0)           ; 0 (0)      ; |21Game|Acumulador:inst21|altaccumulate:altaccumulate_component                                                                                      ; work         ;
+;          |accum_0ve:accum_cell|               ; 10 (10)     ; 5            ; 0           ; 0    ; 5 (5)        ; 5 (5)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |21Game|Acumulador:inst21|altaccumulate:altaccumulate_component|accum_0ve:accum_cell                                                                 ; work         ;
+;    |Comparador17:inst15|                      ; 2 (0)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador17:inst15                                                                                                                          ; work         ;
+;       |lpm_compare:lpm_compare_component|     ; 2 (0)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador17:inst15|lpm_compare:lpm_compare_component                                                                                        ; work         ;
+;          |comptree:comparator|                ; 2 (0)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador17:inst15|lpm_compare:lpm_compare_component|comptree:comparator                                                                    ; work         ;
+;             |cmpchain:cmp[0]|                 ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador17:inst15|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]                                                    ; work         ;
+;             |comptree:sub_comptree|           ; 1 (0)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador17:inst15|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree                                              ; work         ;
+;                |cmpchain:gt_cmp_end|          ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador17:inst15|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|cmpchain:gt_cmp_end                          ; work         ;
+;    |Comparador21:das|                         ; 5 (0)       ; 3            ; 0           ; 0    ; 2 (0)        ; 1 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:das                                                                                                                             ; work         ;
+;       |lpm_compare:lpm_compare_component|     ; 5 (0)       ; 3            ; 0           ; 0    ; 2 (0)        ; 1 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:das|lpm_compare:lpm_compare_component                                                                                           ; work         ;
+;          |comptree:comparator|                ; 5 (0)       ; 3            ; 0           ; 0    ; 2 (0)        ; 1 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:das|lpm_compare:lpm_compare_component|comptree:comparator                                                                       ; work         ;
+;             |cmpchain:cmp[0]|                 ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:das|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]                                                       ; work         ;
+;             |cmpchain:cmp_end|                ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:das|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end                                                      ; work         ;
+;             |comptree:sub_comptree|           ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:das|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree                                                 ; work         ;
+;                |cmpchain:eq_cmp_end|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:das|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|cmpchain:eq_cmp_end                             ; work         ;
+;                |cmpchain:gt_cmp_end|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:das|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|cmpchain:gt_cmp_end                             ; work         ;
+;    |Comparador21:inst5|                       ; 5 (0)       ; 3            ; 0           ; 0    ; 2 (0)        ; 1 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:inst5                                                                                                                           ; work         ;
+;       |lpm_compare:lpm_compare_component|     ; 5 (0)       ; 3            ; 0           ; 0    ; 2 (0)        ; 1 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:inst5|lpm_compare:lpm_compare_component                                                                                         ; work         ;
+;          |comptree:comparator|                ; 5 (0)       ; 3            ; 0           ; 0    ; 2 (0)        ; 1 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:inst5|lpm_compare:lpm_compare_component|comptree:comparator                                                                     ; work         ;
+;             |cmpchain:cmp[0]|                 ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:inst5|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]                                                     ; work         ;
+;             |cmpchain:cmp_end|                ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:inst5|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end                                                    ; work         ;
+;             |comptree:sub_comptree|           ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:inst5|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree                                               ; work         ;
+;                |cmpchain:eq_cmp_end|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:inst5|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|cmpchain:eq_cmp_end                           ; work         ;
+;                |cmpchain:gt_cmp_end|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Comparador21:inst5|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|cmpchain:gt_cmp_end                           ; work         ;
+;    |ComparadorFinal:inst36|                   ; 18 (0)      ; 14           ; 0           ; 0    ; 4 (0)        ; 6 (0)             ; 8 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|ComparadorFinal:inst36                                                                                                                       ; work         ;
+;       |lpm_compare:lpm_compare_component|     ; 18 (0)      ; 14           ; 0           ; 0    ; 4 (0)        ; 6 (0)             ; 8 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|ComparadorFinal:inst36|lpm_compare:lpm_compare_component                                                                                     ; work         ;
+;          |altshift:aeb_ext_lat_ffs|           ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|ComparadorFinal:inst36|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs                                                            ; work         ;
+;          |altshift:agb_ext_lat_ffs|           ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|ComparadorFinal:inst36|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs                                                            ; work         ;
+;          |comptree:comparator|                ; 16 (0)      ; 12           ; 0           ; 0    ; 4 (0)        ; 4 (0)             ; 8 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|ComparadorFinal:inst36|lpm_compare:lpm_compare_component|comptree:comparator                                                                 ; work         ;
+;             |cmpchain:cmp[0]|                 ; 4 (4)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (1)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |21Game|ComparadorFinal:inst36|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[0]                                                 ; work         ;
+;             |cmpchain:cmp[1]|                 ; 4 (4)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (1)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |21Game|ComparadorFinal:inst36|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp[1]                                                 ; work         ;
+;             |cmpchain:cmp_end|                ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |21Game|ComparadorFinal:inst36|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end                                                ; work         ;
+;             |comptree:sub_comptree|           ; 6 (0)       ; 6            ; 0           ; 0    ; 0 (0)        ; 2 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|ComparadorFinal:inst36|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree                                           ; work         ;
+;                |cmpchain:cmp[0]|              ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |21Game|ComparadorFinal:inst36|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|cmpchain:cmp[0]                           ; work         ;
+;                |cmpchain:cmp_end|             ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|ComparadorFinal:inst36|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|cmpchain:cmp_end                          ; work         ;
+;                |comptree:sub_comptree|        ; 2 (0)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|ComparadorFinal:inst36|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|comptree:sub_comptree                     ; work         ;
+;                   |cmpchain:eq_cmp_end|       ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |21Game|ComparadorFinal:inst36|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|comptree:sub_comptree|cmpchain:eq_cmp_end ; work         ;
+;                   |cmpchain:gt_cmp_end|       ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |21Game|ComparadorFinal:inst36|lpm_compare:lpm_compare_component|comptree:comparator|comptree:sub_comptree|comptree:sub_comptree|cmpchain:gt_cmp_end ; work         ;
+;    |ContadorModulo10:inst14|                  ; 6 (6)       ; 4            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |21Game|ContadorModulo10:inst14                                                                                                                      ; work         ;
+;    |ContadorModulo10:inst24|                  ; 6 (6)       ; 4            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |21Game|ContadorModulo10:inst24                                                                                                                      ; work         ;
+;    |ContadorModulo10:inst26|                  ; 6 (6)       ; 4            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |21Game|ContadorModulo10:inst26                                                                                                                      ; work         ;
+;    |Debounce:inst28|                          ; 34 (4)      ; 18           ; 0           ; 0    ; 16 (1)       ; 3 (3)             ; 15 (0)           ; 0 (0)           ; 0 (0)      ; |21Game|Debounce:inst28                                                                                                                              ; work         ;
+;       |7408:inst5|                            ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Debounce:inst28|7408:inst5                                                                                                                   ; work         ;
+;       |74294:inst4|                           ; 29 (29)     ; 15           ; 0           ; 0    ; 14 (14)      ; 0 (0)             ; 15 (15)          ; 0 (0)           ; 0 (0)      ; |21Game|Debounce:inst28|74294:inst4                                                                                                                  ; work         ;
+;    |Debounce:inst31|                          ; 34 (4)      ; 18           ; 0           ; 0    ; 16 (1)       ; 3 (3)             ; 15 (0)           ; 0 (0)           ; 0 (0)      ; |21Game|Debounce:inst31                                                                                                                              ; work         ;
+;       |7408:inst5|                            ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Debounce:inst31|7408:inst5                                                                                                                   ; work         ;
+;       |74294:inst4|                           ; 29 (29)     ; 15           ; 0           ; 0    ; 14 (14)      ; 0 (0)             ; 15 (15)          ; 0 (0)           ; 0 (0)      ; |21Game|Debounce:inst31|74294:inst4                                                                                                                  ; work         ;
+;    |Debounce:inst33|                          ; 34 (4)      ; 18           ; 0           ; 0    ; 16 (1)       ; 3 (3)             ; 15 (0)           ; 0 (0)           ; 0 (0)      ; |21Game|Debounce:inst33                                                                                                                              ; work         ;
+;       |7408:inst5|                            ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Debounce:inst33|7408:inst5                                                                                                                   ; work         ;
+;       |74294:inst4|                           ; 29 (29)     ; 15           ; 0           ; 0    ; 14 (14)      ; 0 (0)             ; 15 (15)          ; 0 (0)           ; 0 (0)      ; |21Game|Debounce:inst33|74294:inst4                                                                                                                  ; work         ;
+;    |MaquinaDeEstadoMoore:inst|                ; 7 (7)       ; 2            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |21Game|MaquinaDeEstadoMoore:inst                                                                                                                    ; work         ;
+;    |ROM:inst4|                                ; 0 (0)       ; 0            ; 256         ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|ROM:inst4                                                                                                                                    ; work         ;
+;       |lpm_rom:lpm_rom_component|             ; 0 (0)       ; 0            ; 256         ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|ROM:inst4|lpm_rom:lpm_rom_component                                                                                                          ; work         ;
+;          |altrom:srom|                        ; 0 (0)       ; 0            ; 256         ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|ROM:inst4|lpm_rom:lpm_rom_component|altrom:srom                                                                                              ; work         ;
+;    |Saidas:inst54|                            ; 5 (5)       ; 0            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|Saidas:inst54                                                                                                                                ; work         ;
+;    |cont52:inst23|                            ; 8 (2)       ; 6            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 6 (0)            ; 6 (0)           ; 0 (0)      ; |21Game|cont52:inst23                                                                                                                                ; work         ;
+;       |lpm_counter1:inst|                     ; 6 (0)       ; 6            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 6 (0)            ; 6 (0)           ; 0 (0)      ; |21Game|cont52:inst23|lpm_counter1:inst                                                                                                              ; work         ;
+;          |lpm_counter:lpm_counter_component|  ; 6 (0)       ; 6            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 6 (0)            ; 6 (0)           ; 0 (0)      ; |21Game|cont52:inst23|lpm_counter1:inst|lpm_counter:lpm_counter_component                                                                            ; work         ;
+;             |alt_counter_f10ke:wysi_counter|  ; 6 (6)       ; 6            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 6 (6)            ; 6 (6)           ; 0 (0)      ; |21Game|cont52:inst23|lpm_counter1:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter                                             ; work         ;
+;    |contador0a3:inst16|                       ; 2 (2)       ; 2            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |21Game|contador0a3:inst16                                                                                                                           ; work         ;
+;    |decoderAcumulador:inst44|                 ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|decoderAcumulador:inst44                                                                                                                     ; work         ;
+;    |decoderSelecao7seg:inst29|                ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|decoderSelecao7seg:inst29                                                                                                                    ; work         ;
+;    |muxBCD:inst18|                            ; 23 (0)      ; 0            ; 0           ; 0    ; 23 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|muxBCD:inst18                                                                                                                                ; work         ;
+;       |lpm_mux1:inst|                         ; 23 (0)      ; 0            ; 0           ; 0    ; 23 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|muxBCD:inst18|lpm_mux1:inst                                                                                                                  ; work         ;
+;          |lpm_mux:lpm_mux_component|          ; 23 (0)      ; 0            ; 0           ; 0    ; 23 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|muxBCD:inst18|lpm_mux1:inst|lpm_mux:lpm_mux_component                                                                                        ; work         ;
+;             |muxlut:$00009|                   ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|muxBCD:inst18|lpm_mux1:inst|lpm_mux:lpm_mux_component|muxlut:$00009                                                                          ; work         ;
+;             |muxlut:$00011|                   ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|muxBCD:inst18|lpm_mux1:inst|lpm_mux:lpm_mux_component|muxlut:$00011                                                                          ; work         ;
+;             |muxlut:$00013|                   ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|muxBCD:inst18|lpm_mux1:inst|lpm_mux:lpm_mux_component|muxlut:$00013                                                                          ; work         ;
+;             |muxlut:$00015|                   ; 5 (5)       ; 0            ; 0           ; 0    ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |21Game|muxBCD:inst18|lpm_mux1:inst|lpm_mux:lpm_mux_component|muxlut:$00015                                                                          ; work         ;
++-----------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------+
+; Delay Chain Summary                    ;
++---------------+----------+-------------+
+; Name          ; Pin Type ; Pad to Core ;
++---------------+----------+-------------+
+; CLOCKCONT     ; Input    ; OFF         ;
+; RESET         ; Input    ; ON          ;
+; HIT           ; Input    ; ON          ;
+; STAY          ; Input    ; ON          ;
+; a             ; Output   ; OFF         ;
+; b             ; Output   ; OFF         ;
+; c             ; Output   ; OFF         ;
+; d             ; Output   ; OFF         ;
+; e             ; Output   ; OFF         ;
+; f             ; Output   ; OFF         ;
+; g             ; Output   ; OFF         ;
+; D1            ; Output   ; OFF         ;
+; D2            ; Output   ; OFF         ;
+; D3            ; Output   ; OFF         ;
+; D4            ; Output   ; OFF         ;
+; Empate        ; Output   ; OFF         ;
+; DealerGanhou  ; Output   ; OFF         ;
+; JogadorGanhou ; Output   ; OFF         ;
+; T1            ; Output   ; OFF         ;
+; T2            ; Output   ; OFF         ;
++---------------+----------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                            ;
++---------------------------------------------------------+------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+-------------------+----------+
+; Name                                                    ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; EABs ; MIF               ; Location ;
++---------------------------------------------------------+------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+-------------------+----------+
+; ROM:inst4|lpm_rom:lpm_rom_component|altrom:srom|content ; ROM  ; 64           ; 4            ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 256  ; 1    ; TabelaMemoria.hex ; ESB_L    ;
++---------------------------------------------------------+------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+------+-------------------+----------+
+Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in /home/aluno/21 Game - Bruno e Lucas/21Game.pin.
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II Fitter
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Mon Aug 21 08:50:51 2017
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off 21Game -c 21Game
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Selected device EP1K100QC208-3 for design "21Game"
+Info: Fitter is using the Classic Timing Analyzer
+Info: Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
+    Info: Assuming a global fmax requirement of 1000 MHz
+    Info: Not setting a global tsu requirement
+    Info: Not setting a global tco requirement
+    Info: Not setting a global tpd requirement
+Info: Inserted 0 logic cells in first fitting attempt
+Warning: Ignored locations or region assignments to the following nodes
+    Warning: Node "T3" is assigned to location or region, but does not exist in design
+    Warning: Node "T4" is assigned to location or region, but does not exist in design
+Info: Started fitting attempt 1 on Mon Aug 21 2017 at 08:50:53
+Info: Fitter placement preparation operations beginning
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info: Fitter placement operations beginning
+Info: Fitter placement operations ending: elapsed time is 00:00:01
+Info: Fitter routing operations beginning
+Info: Fitter routing operations ending: elapsed time is 00:00:00
+Info: Quartus II Fitter was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 217 megabytes
+    Info: Processing ended: Mon Aug 21 08:51:04 2017
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:12
+
+

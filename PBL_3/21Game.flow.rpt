@@ -1,0 +1,174 @@
+Flow report for 21Game
+Mon Aug 21 08:51:20 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------+
+; Flow Summary                                                       ;
++-------------------------+------------------------------------------+
+; Flow Status             ; Successful - Mon Aug 21 08:51:20 2017    ;
+; Quartus II Version      ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name           ; 21Game                                   ;
+; Top-level Entity Name   ; 21Game                                   ;
+; Family                  ; ACEX1K                                   ;
+; Device                  ; EP1K100QC208-3                           ;
+; Timing Models           ; Final                                    ;
+; Met timing requirements ; No                                       ;
+; Total logic elements    ; 271 / 4,992 ( 5 % )                      ;
+; Total pins              ; 20 / 147 ( 14 % )                        ;
+; Total memory bits       ; 256 / 49,152 ( < 1 % )                   ;
+; Total PLLs              ; 0                                        ;
++-------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 08/21/2017 08:50:42 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; 21Game              ;
++-------------------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                 ;
++------------------------------------+--------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                    ; Value                                                        ; Default Value ; Entity Name ; Section Id     ;
++------------------------------------+--------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 105425944259.150331624204755                                 ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COUNTER                                                  ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_MUX                                                      ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COUNTER                                                  ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; PARALLEL_ADD                                                 ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COUNTER                                                  ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_MUX                                                      ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; ALTACCUMULATE                                                ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COMPARE                                                  ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COMPARE                                                  ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COMPARE                                                  ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.0                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.0                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.0                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.0                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.0                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.0                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.0                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.0                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.0                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.0                                                          ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                                                           ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; D:/UEFS/CD/Problema 3/21 Game/21Game.dpf                     ; --            ; --          ; --             ;
+; MISC_FILE                          ; D:/UEFS/CD/Problema 3/21 Game - Vers�o 3/21Game.dpf          ; --            ; --          ; --             ;
+; MISC_FILE                          ; /home/aluno/21 Game - Versão 4/21Game.dpf                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; /home/aluno/PBL 3 LUCAS BRUNO/21 Game - Versão 5/21Game.dpf ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_counter0.tdf                                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_counter0.bsf                                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_counter0.inc                                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux0.tdf                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux0.bsf                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux0.inc                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux0_syn.v                                               ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_counter1.tdf                                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_counter1.bsf                                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_counter1.inc                                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_counter1_syn.v                                           ; --            ; --          ; --             ;
+; MISC_FILE                          ; parallel_add0.tdf                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; parallel_add0.bsf                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; parallel_add0.inc                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; parallel_add0_syn.v                                          ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_counter2.tdf                                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_counter2.bsf                                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_counter2.inc                                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux1.tdf                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux1.bsf                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux1.inc                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; Acumulador.bsf                                               ; --            ; --          ; --             ;
+; MISC_FILE                          ; Acumulador_inst.vhd                                          ; --            ; --          ; --             ;
+; MISC_FILE                          ; Acumulador.inc                                               ; --            ; --          ; --             ;
+; MISC_FILE                          ; Acumulador.cmp                                               ; --            ; --          ; --             ;
+; MISC_FILE                          ; Comparador21.bsf                                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; Comparador21_inst.vhd                                        ; --            ; --          ; --             ;
+; MISC_FILE                          ; Comparador21.inc                                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; Comparador21.cmp                                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; Comparador17.bsf                                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; Comparador17_inst.vhd                                        ; --            ; --          ; --             ;
+; MISC_FILE                          ; Comparador17.inc                                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; Comparador17.cmp                                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; ComparadorFinal.bsf                                          ; --            ; --          ; --             ;
+; MISC_FILE                          ; ComparadorFinal_inst.vhd                                     ; --            ; --          ; --             ;
+; MISC_FILE                          ; ComparadorFinal.inc                                          ; --            ; --          ; --             ;
+; MISC_FILE                          ; ComparadorFinal.cmp                                          ; --            ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                          ; --            ; --          ; eda_blast_fpga ;
++------------------------------------+--------------------------------------------------------------+---------------+-------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis    ; 00:00:07     ; 1.0                     ; --                  ; 00:00:07                           ;
+; Fitter                  ; 00:00:13     ; 1.0                     ; --                  ; 00:00:12                           ;
+; Assembler               ; 00:00:10     ; 1.0                     ; --                  ; 00:00:11                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; --                  ; 00:00:01                           ;
+; Total                   ; 00:00:31     ; --                      ; --                  ; 00:00:31                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                             ;
++-------------------------+------------------+------------------+------------+----------------+
+; Module Name             ; Machine Hostname ; OS Name          ; OS Version ; Processor type ;
++-------------------------+------------------+------------------+------------+----------------+
+; Analysis & Synthesis    ; LabHard-25101    ; Debian GNU/Linux ; 7          ; i686           ;
+; Fitter                  ; LabHard-25101    ; Debian GNU/Linux ; 7          ; i686           ;
+; Assembler               ; LabHard-25101    ; Debian GNU/Linux ; 7          ; i686           ;
+; Classic Timing Analyzer ; LabHard-25101    ; Debian GNU/Linux ; 7          ; i686           ;
++-------------------------+------------------+------------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off 21Game -c 21Game
+quartus_fit --read_settings_files=off --write_settings_files=off 21Game -c 21Game
+quartus_asm --read_settings_files=off --write_settings_files=off 21Game -c 21Game
+quartus_tan --read_settings_files=off --write_settings_files=off 21Game -c 21Game
+
+
+

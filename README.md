@@ -8,3 +8,7 @@
 
 3.[Descritivo do Problema - Parte I](https://drive.google.com/open?id=0Bx1VVgelLTO_YzRmLWFLMGI3RVU) [Descritivo do Problema - Parte II](https://drive.google.com/open?id=0Bx1VVgelLTO_OURPM3N6UlBVbUk)
 
+## Links úteis ##
+
+1.[Circuitos Integrados família 74 disponíveis no Quartus II 9.0](http://susta.cz/fel/74/index_eng.htm)
+

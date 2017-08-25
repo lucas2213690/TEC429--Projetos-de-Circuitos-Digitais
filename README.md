@@ -18,3 +18,7 @@
 
 4.[Tutorial para criar e simular circuitos digitais no Altera Quartus II](https://www2.pcs.usp.br/~labdig/material/GuiaResumido-Quartus_II_91_corrigida.pdf)
 
+## Material Sobre Máquina de Estados ##
+
+1.[BROWN, Stephen D; VRANESIC, Zvonko G. Syncronous Finite State Machines. In: **Fundamentals of digital logic with Verilog design**. Cap.8, p.480-573]
+

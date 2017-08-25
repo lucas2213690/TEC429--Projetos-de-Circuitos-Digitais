@@ -20,5 +20,5 @@
 
 ## Material Sobre Máquina de Estados ##
 
-1.[BROWN, Stephen D; VRANESIC, Zvonko G. Syncronous Finite State Machines. In: **Fundamentals of digital logic with Verilog design**. Cap.8, p.480-573]
+1.[BROWN, Stephen D; VRANESIC, Zvonko G. Syncronous Finite State Machines. In: **Fundamentals of digital logic with Verilog design**. Cap.8, p.480-573](https://drive.google.com/open?id=0Bx1VVgelLTO_T096X2JrRV8tWHM)
 
